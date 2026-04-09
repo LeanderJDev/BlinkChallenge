@@ -51,3 +51,7 @@ Hierbei handelt es sich um eine minimale Umsetzung des busy waiting. Diese errei
 ### blink_watchdog_partial
 
 Erreicht ein periodisches Blinken der LED mit nur 16 Byte im Flash. Die LED ist dabei zwar 1s aus, aber nur 50ms an.
+
+### blink_watchdog_interrupt
+
+Eine Umsetzung mit dem WDT, die die Anforderungen erfüllt, dabei aber 38 Byte benötigt aufgrund der Interrupt Vektor Tabelle
