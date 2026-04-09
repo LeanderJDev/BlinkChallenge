@@ -55,3 +55,7 @@ Erreicht ein periodisches Blinken der LED mit nur 16 Byte im Flash. Die LED ist 
 ### blink_watchdog_interrupt
 
 Eine Umsetzung mit dem WDT, die die Anforderungen erfüllt, dabei aber 38 Byte benötigt aufgrund der Interrupt Vektor Tabelle
+
+### blink_watchdog_interrupt_optim
+
+Die Vorherige Version aber so weit minimiert, dass sie in 18 Byte Flash passt
