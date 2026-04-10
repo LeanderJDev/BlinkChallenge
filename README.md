@@ -59,3 +59,7 @@ Eine Umsetzung mit dem WDT, die die Anforderungen erfüllt, dabei aber 38 Byte b
 ### blink_watchdog_interrupt_optim
 
 Die Vorherige Version aber so weit minimiert, dass sie in 18 Byte Flash passt
+
+### blink_watchdog_interrupt_optim_2
+
+Durch einmaliges ausführliches Schreiben des Registers kann ein weitere Aufruf entfernt werden. Das Programm braucht nur noch 16 Byte Flashspeicher
