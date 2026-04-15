@@ -63,3 +63,12 @@ Die Vorherige Version aber so weit minimiert, dass sie in 18 Byte Flash passt
 ### blink_watchdog_interrupt_optim_2
 
 Durch einmaliges ausführliches Schreiben des Registers kann ein weitere Aufruf entfernt werden. Das Programm braucht nur noch 16 Byte Flashspeicher
+
+## Zusammenfassung
+
+924 Byte blink.ino.bin
+36 Byte blink.bin
+32 Byte blink_optim.bin
+38 Byte blink_watchdog_interrupt.bin
+18 Byte blink_watchdog_interrupt_optim.bin
+16 Byte blink_watchdog_interrupt_optim_2.bin
