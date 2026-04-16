@@ -44,31 +44,32 @@ Falls Fuse Bits gesetzt werden müssen gibt es dafür auch ein Shell Skript, all
 
 ## Erfolge
 
-### blink_optim
+### 01_blink_optim
 
 Hierbei handelt es sich um eine minimale Umsetzung des busy waiting. Diese erreicht die Anforderungen mit 32 Byte im Flash.
 
-### blink_watchdog_partial
+### 02_blink_watchdog_cheat
 
 Erreicht ein periodisches Blinken der LED mit nur 16 Byte im Flash. Die LED ist dabei zwar 1s aus, aber nur 50ms an.
 
-### blink_watchdog_interrupt
+### 03_blink_watchdog_interrupt
 
 Eine Umsetzung mit dem WDT, die die Anforderungen erfüllt, dabei aber 38 Byte benötigt aufgrund der Interrupt Vektor Tabelle
 
-### blink_watchdog_interrupt_optim
+### 04_blink_watchdog_interrupt_optim
 
 Die Vorherige Version aber so weit minimiert, dass sie in 18 Byte Flash passt
 
-### blink_watchdog_interrupt_optim_2
+### 05_blink_watchdog_interrupt_optim_2
 
 Durch einmaliges ausführliches Schreiben des Registers kann ein weitere Aufruf entfernt werden. Das Programm braucht nur noch 16 Byte Flashspeicher
 
 ## Zusammenfassung
 
 924 Byte blink.ino.bin
-36 Byte blink.bin
-32 Byte blink_optim.bin
-38 Byte blink_watchdog_interrupt.bin
-18 Byte blink_watchdog_interrupt_optim.bin
-16 Byte blink_watchdog_interrupt_optim_2.bin
+36 Byte 00_blink.bin
+32 Byte 01_blink_optim.bin
+16 Byte 02_blink_watchdog_cheat
+38 Byte 03_blink_watchdog_interrupt.bin
+18 Byte 04_blink_watchdog_interrupt_optim.bin
+16 Byte 05_blink_watchdog_interrupt_optim_2.bin
