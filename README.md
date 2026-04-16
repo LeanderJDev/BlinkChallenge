@@ -66,10 +66,12 @@ Durch einmaliges ausführliches Schreiben des Registers kann ein weitere Aufruf 
 
 ## Zusammenfassung
 
-924 Byte blink.ino.bin
-36 Byte 00_blink.bin
-32 Byte 01_blink_optim.bin
-16 Byte 02_blink_watchdog_cheat
-38 Byte 03_blink_watchdog_interrupt.bin
-18 Byte 04_blink_watchdog_interrupt_optim.bin
-16 Byte 05_blink_watchdog_interrupt_optim_2.bin
+| Implementation                          | Size     |
+| --------------------------------------- | -------- |
+| blink.ino.bin                           | 924 Byte |
+| 00_blink.bin                            | 36 Byte  |
+| 01_blink_optim.bin                      | 32 Byte  |
+| 02_blink_watchdog_cheat                 | 16 Byte  |
+| 03_blink_watchdog_interrupt.bin         | 38 Byte  |
+| 04_blink_watchdog_interrupt_optim.bin   | 18 Byte  |
+| 05_blink_watchdog_interrupt_optim_2.bin | 16 Byte  |
