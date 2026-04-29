@@ -75,3 +75,34 @@ Durch einmaliges ausführliches Schreiben des Registers kann ein weitere Aufruf 
 | 03_blink_watchdog_interrupt.bin         | 38 Byte  |
 | 04_blink_watchdog_interrupt_optim.bin   | 18 Byte  |
 | 05_blink_watchdog_interrupt_optim_2.bin | 16 Byte  |
+
+## Anleitung zum selbst Ausprobieren
+
+1. Zum Vergleich kann erstmal das Arduino IDE Blink Example geflasht werden
+
+```bash
+# Kompilieren mit arduino-cli
+arduino-cli compile --fqbn arduino:avr:uno --build-path build blink
+# Flashen direkt aus dem build dir (könnte auch mit arduino-cli erfolgen)
+./flash.sh build/blink.ino.hex /dev/<portname>
+```
+
+2. Im Vergleich dazu ist das Flashen des klassischen Blink Assembler-Codes in 00_blink interessant
+
+```bash
+# Kompilieren mit make
+make build 00_blink
+# Flashen mit make
+make flash 00_blink PORT=/dev/<portname>
+```
+
+Alternativ ist das auch mit den Shellskripten möglich
+
+```bash
+# Kompilieren mit make
+./build.sh 00_blink.s
+# Flashen mit make
+./flash.sh 00_blink.hex /dev/<portname>
+```
+
+3. Der gleiche Prozess kann mit den anderen Versionen durchgeführt werden. avrdude gibt dabei immer die Anzahl der geschriebenen Bytes aus
