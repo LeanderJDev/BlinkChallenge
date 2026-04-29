@@ -80,7 +80,7 @@ Durch einmaliges ausführliches Schreiben des Registers kann ein weitere Aufruf 
 
 1. Zum Vergleich kann erstmal das Arduino IDE Blink Example geflasht werden
 
-```bash
+```shell
 # Kompilieren mit arduino-cli
 arduino-cli compile --fqbn arduino:avr:uno --build-path build blink
 # Flashen direkt aus dem build dir (könnte auch mit arduino-cli erfolgen)
@@ -89,7 +89,7 @@ arduino-cli compile --fqbn arduino:avr:uno --build-path build blink
 
 2. Im Vergleich dazu ist das Flashen des klassischen Blink Assembler-Codes in 00_blink interessant
 
-```bash
+```shell
 # Kompilieren mit make
 make build 00_blink
 # Flashen mit make
@@ -98,7 +98,7 @@ make flash 00_blink PORT=/dev/<portname>
 
 Alternativ ist das auch mit den Shellskripten möglich
 
-```bash
+```shell
 # Kompilieren mit make
 ./build.sh 00_blink.s
 # Flashen mit make
